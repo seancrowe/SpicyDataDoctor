@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{700793A2-86E1-4F2B-BCD3-25506DC96FD6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SpicyDataDoctor</RootNamespace>
+    <AssemblyName>SpicyDataDoctor</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ookii.Dialogs.Wpf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ookii.Dialogs.Wpf.1.0.0\lib\net45\Ookii.Dialogs.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Connected Services\ChiliService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connector.cs" />
+    <Compile Include="Controls\Problem.xaml.cs">
+      <DependentUpon>Problem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HealthAssessment.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Logic\Asset.cs" />
+    <Compile Include="Logic\Document.cs" />
+    <Compile Include="Operations.cs" />
+    <Compile Include="Windows\Connector.xaml.cs">
+      <DependentUpon>Connector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Results.xaml.cs">
+      <DependentUpon>Results.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls\Problem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Windows\Connector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Results.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Connected Services\ChiliService\main.wsdl" />
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.AdsGetFromURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ApiKeyClearHeaderFieldsForServerDownloadsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ApiKeyGetCurrentSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ApiKeyKeepAliveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ApiKeySetHeaderFieldForServerDownloadsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ApiKeySetRequestHeaderForDomainResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ApiKeySetRequestWithCredentialsForDomainResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.AssetGetImageInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.BarcodeCreateColoredResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.BarcodeCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.CsvFileCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DataSourceAddSampleFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DataSourceDeleteSampleFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DataSourceDownloadSpreadsheetsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DataSourceDownloadURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DataSourceFileGetXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DataSourceListSampleFilesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DataSourceSalesForceGetXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DataSourceSpreadsheetGetXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCopyAnnotationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCopyDocumentEventActionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCopyVariableDefinitionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateFromBlankDocTemplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateFromChiliPackageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateFromODTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateFromPDFResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateHTMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateIDMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateImagesAndPDFResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateImagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateODFResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreatePackageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreatePDFResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateTempFoldingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateTempHTMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateTempIDMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateTempImagesAndPDFResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateTempImagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateTempODFResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateTempPackageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentCreateTempPDFResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetAnnotationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetDefaultSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetDocumentEventActionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetEditorURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetFoldingViewerURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetHTMLEditorURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetHTMLFoldingViewerURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetHTMLPreloadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetHTMLPreloadURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetHTMLThreeDModelViewerURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetIpadXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetPlacedAdsAndEditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetPreflightResultsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetThreeDModelViewerURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetUsedAssetsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetVariableDefinitionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentGetVariableValuesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentProcessServerSideResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentSetAnnotationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentSetAssetDirectoriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentSetConstraintsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentSetDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentSetDocumentEventActionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentSetVariableDefinitionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DocumentSetVariableValuesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DownloadURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.DynamicAssetProviderGetTempAssetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.EditsGetFromURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.EnvironmentAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.EnvironmentCopyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.EnvironmentDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.EnvironmentGetColorProfilesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.EnvironmentGetCurrentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.EnvironmentGetDiskUsageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.EnvironmentGetLoginSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.EnvironmentGetReflectionMapsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.EnvironmentGetSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.EnvironmentListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.EnvironmentSaveSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.FoldingSettingCreatePackageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.FontGetIncludedGlyphsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.GenerateApiKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.GenerateApiKeyWithSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.GetServerDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.GoogleCreateAuthorizationUrlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.HealthCheckExecuteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.IconSetAddIconResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.IconSetDeleteIconResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.IconSetGetIconsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.InterfaceGetInitialSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.LanguageGetCombinedStringsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.LanguageGetCsvURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.LanguageGetUnicodeTextURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.LanguageImportCsvResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.LanguageImportUnicodeTextResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.LanguageSaveStringsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.LanguagesGetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.LockApiKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.MobileFeedGetDocumentListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.MobileFeedGetDocumentXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ODTGetStylesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ODTGetTextFlowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ProfilingClearSnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ProfilingSaveSnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceFolderAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceFolderCopyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceFolderDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceFolderMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceGetHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceGetTreeLevelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceGetTreeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemAddFromURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemAddFromURLWithModificationDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemAddPreviewOverrideResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemAddWithPreviewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemCopyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetByIdOrPathResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetByPathResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetCacheInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetCustomMetaDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetDefinitionXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetPrivateInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetTransformedURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetTransformedURLWithDebugInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetURLForAnonymousUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetURLWithDebugInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemGetXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemRemovePreviewOverrideResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemReplaceFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemReplaceFileWithPreviewOverrideResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemResetPreviewsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemsAddFromZipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemSaveCustomMetaDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceItemSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceLibraryGetSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceLibrarySaveSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceSearchByIDsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceSearchInFolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceSearchPagedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceSearchPagedWithSortingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ResourceSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerDeleteAllSaveSystemFileInfosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerDeleteSavedSystemInfoXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerGetLicenseInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerGetLoggingSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerGetSavedSystemInfoListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerGetSavedSystemInfoXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerGetSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerGetSystemInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerLicenseRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerLogClearResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerSaveLoggingSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerSaveSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ServerSaveSystemInfoXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SetAssetDirectoriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SetAutomaticPreviewGenerationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SetContentAdministrationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SetNextResourceItemIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SetUserLanguageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SetWorkingEnvironmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SetWorkspaceAdministrationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SpellCheckDictionariesGetSystemListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SpellCheckDictionaryAddFromSystemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SpellCheckDictionaryAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SpellCheckDictionaryReplaceFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SwitchServerFlowGetCheckPointsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SwitchServerFlowGetElementsJobCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SwitchServerFlowGetFullConfigResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SwitchServerFlowGetJobsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SwitchServerFlowGetSubmitPointsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SwitchServerFlowSubmitFileToFolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SwitchServerFlowSubmitFileToSubmitPointResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SwitchServerGetFlowListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.SwitchServerTestConnectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.TaskGetEditorCliLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.TaskGetStatusAndRemoveIfCompletedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.TaskGetStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.TaskRemoveFromLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.TasksGetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.TasksGetQueueOverviewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.TasksGetStatussesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.ThreeDModelCreatePackageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.UploadExternalAssetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.XinetExecutePortalDICallResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.XinetSetCurrentCredentialsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ChiliService\SpicyDataDoctor.ChiliService.XinetTestConnectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icons8-active-state-32.png" />
+    <Resource Include="Images\icons8-cancel-32.png" />
+    <Resource Include="Images\icons8-check-file-32.png" />
+    <Resource Include="Images\icons8-checked-32.png" />
+    <Resource Include="Images\icons8-chili-pepper-32.png" />
+    <Resource Include="Images\icons8-circled-play-32.png" />
+    <Resource Include="Images\icons8-compare-32.png" />
+    <Resource Include="Images\icons8-connect-32.png" />
+    <Resource Include="Images\icons8-copy-32.png" />
+    <Resource Include="Images\icons8-copy-job-32.png" />
+    <Resource Include="Images\icons8-create-32.png" />
+    <Resource Include="Images\icons8-create-archive-32.png" />
+    <Resource Include="Images\icons8-download-from-cloud-32.png" />
+    <Resource Include="Images\icons8-download-from-the-cloud-32.png" />
+    <Resource Include="Images\icons8-edit-32.png" />
+    <Resource Include="Images\icons8-edit-property-32.png" />
+    <Resource Include="Images\icons8-error-32.png" />
+    <Resource Include="Images\icons8-external-link-32.png" />
+    <Resource Include="Images\icons8-file-32.png" />
+    <Resource Include="Images\icons8-folder-32.png" />
+    <Resource Include="Images\icons8-google-web-search-32.png" />
+    <Resource Include="Images\icons8-help-32.png" />
+    <Resource Include="Images\icons8-key-32.png" />
+    <Resource Include="Images\icons8-minus-32.png" />
+    <Resource Include="Images\icons8-ok-32.png" />
+    <Resource Include="Images\icons8-open-archive-32.png" />
+    <Resource Include="Images\icons8-opened-folder-32.png" />
+    <Resource Include="Images\icons8-pdf-32.png" />
+    <Resource Include="Images\icons8-plus-32.png" />
+    <Resource Include="Images\icons8-refresh-32.png" />
+    <Resource Include="Images\icons8-switch-off-48.png" />
+    <Resource Include="Images\icons8-switch-on-48.png" />
+    <Resource Include="Images\icons8-sync-32.png" />
+    <Resource Include="Images\icons8-synchronize-32.png" />
+    <Resource Include="Images\icons8-trash-32.png" />
+    <Resource Include="Images\icons8-view-32.png" />
+    <Resource Include="Images\loading.gif" />
+    <Resource Include="Images\loading32.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ChiliService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ChiliService\main.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ChiliService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ChiliService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ChiliService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <MoveToLibFolder Include="$(OutputPath)*.dll ; $(OutputPath)*.pdb ; $(OutputPath)*.xml" />
+    </ItemGroup>
+    <Move SourceFiles="@(MoveToLibFolder)" DestinationFolder="$(OutputPath)lib" OverwriteReadOnlyFiles="true" />
+  </Target>
+</Project>

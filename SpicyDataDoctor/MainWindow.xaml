@@ -1,0 +1,57 @@
+﻿<Window x:Class="SpicyDataDoctor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpicyDataDoctor"
+        mc:Ignorable="d"
+        Title="Spicy Data Doctor" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <StackPanel Margin="8">
+        <Label Content="Connections" FontSize="20" Foreground="DarkRed" FontWeight="Bold"/>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Server Connected" FontSize="18"/>
+                <Image Name="ddServerConnectedStatusImage" Width="20" Height="20" Source="{Binding Path=ServerIcon}"/>
+                <Button Margin="10 0 0 0" Click="OnOpenConnector">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="20" Height="20" Source="/SpicyDataDoctor;component/Images/icons8-connect-32.png"/>
+                        <Label Content="Open Connector"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="40 0 0 0">
+                <Label Content="Data Folder Path" FontSize="18"/>
+                <Image Name="ddDataFolderStatusImage" Width="20" Height="20" Source="{Binding Path=DataIcon}"/>
+                <Button Margin="10 0 0 0" Click="OnSelectDataFolder">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="20" Height="20" Source="/SpicyDataDoctor;component/Images/icons8-opened-folder-32.png"/>
+                        <Label Content="Select Data Folder"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+        <Label Content="Exam" Margin="0 10 0 0" FontSize="20" Foreground="DarkRed" FontWeight="Bold"/>
+        <StackPanel IsEnabled="{Binding Path=ExamEnabled}">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Choose Environment" FontSize="18"/>
+                <ComboBox Name="ddEnvironment" Width="350" FontSize="18"/>
+            </StackPanel>
+            <StackPanel Margin="0 20 0 0" >
+                <Button Name="ddHealthAssessmentButton" IsEnabled="{Binding Path=HealthAssessmentEnabled}" Width="600" Click="OnHealthAssessment" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="20" Height="20" Source="/SpicyDataDoctor;component/Images/icons8-google-web-search-32.png"/>
+                        <Label Content="Health Assessment"/>
+                    </StackPanel>
+                </Button>
+                <ProgressBar Visibility="Collapsed" Name="ddHealthAssessmentProgressBar" Value="10" Minimum="0" Maximum="100" Height="30" Width="600" Foreground="#FFDA1B1B" />
+            </StackPanel>
+            <StackPanel Name="ddProblemsPanel" Visibility="Hidden">
+                <Label Content="Problems" Margin="0 10 0 0" FontSize="20" Foreground="DarkRed" FontWeight="Bold"/>
+                <ScrollViewer Height="200" Margin="8">
+                    <ListBox Name="ddProblemListBox" Background="LightGray"/>
+                </ScrollViewer>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>
