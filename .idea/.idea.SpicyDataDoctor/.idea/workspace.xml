@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5aec8585-0ff3-41b8-a6cb-bfbbc918e135" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SpicyDataDoctor/Operations.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2415">
+              <caret line="271" selection-start-line="271" selection-end-line="271" />
+              <folding>
+                <marker date="1555913792816" expanded="false" signature="6:377" ph="..." />
+                <marker date="1555913792816" expanded="true" signature="404:14499" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="460:14495" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="544:732" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="609:722" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="807:989" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="870:979" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="1056:1241" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="1120:1231" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="1308:1499" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="1374:1489" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="1590:1817" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="1668:1807" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="1941:2044" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="2258:2485" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="2521:3116" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="2887:3106" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="3187:3488" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="3383:3478" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="3540:4781" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="3600:4583" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="3860:4236" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="4257:4552" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="4600:4771" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="4857:7104" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="4933:6471" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="4999:5071" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="5151:6457" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="5176:6351" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="5455:5620" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="5664:5745" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="5822:6282" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="5958:6256" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="6106:6226" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="6394:6439" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="6505:6843" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="6860:7094" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="7144:7369" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="7231:7359" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="7402:9054" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="7945:8127" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="9093:10767" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="9225:10294" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="9561:10278" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="9636:10260" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="9741:9966" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="9993:10148" ph="/* if (rc == true) ... */" />
+                <marker date="1555913792816" expanded="true" signature="10311:10506" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="10565:10653" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="10670:10747" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="10842:11098" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="11161:11544" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="11618:14489" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="11971:12161" ph="/* mainWindow.ddHealthAssessmentButton.Visibility = System.Windows.Visibility.Collapsed; ... */" />
+                <marker date="1555913792816" expanded="true" signature="12763:14479" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="13088:14398" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="13195:13765" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="13356:13612" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="13843:14379" ph="{...}" />
+                <marker date="1555913792816" expanded="true" signature="14004:14227" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/SpicyDataDoctor/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpicyDataDoctor/Operations.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="SpicyDataDoctor" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="SpicyDataDoctor" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="SpicyDataDoctor" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="SpicyDataDoctor" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="SpicyDataDoctor" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="MainWindow.xaml" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5aec8585-0ff3-41b8-a6cb-bfbbc918e135" name="Default Changelist" comment="" />
+      <created>1563733057755</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563733057755</updated>
+      <workItem from="1563733060912" duration="752000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="752000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49861112" visible="true" weight="0.17035547" />
+      <window_info id="Structure" order="1" sideWeight="0.5013889" side_tool="true" visible="true" weight="0.17035547" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="XAML Preview" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Performance Profiler" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SpicyDataDoctor/MainWindow.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-313">
+          <folding>
+            <marker date="1555913371970" expanded="true" signature="0:3476" ph="&lt;&lt;StackPanel Margin=&quot;8&quot;&gt;&#10;        &lt;Label Content=&quot;Connections&quot; FontSize=&quot;20&quot; Foreground=&quot;DarkRed&quot; FontWeight=&quot;Bold&quot;/&gt;&#10;        &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;            &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                &lt;Label Content=&quot;Server Connected&quot; FontSize=&quot;18&quot;/&gt;&#10;                &lt;Image Name=&quot;ddServerConnectedStatusImage&quot; Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;{Binding Path=ServerIcon}&quot;/&gt;&#10;                &lt;Button Margin=&quot;10 0 0 0&quot; Click=&quot;OnOpenConnector&quot;&gt;&#10;                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-connect-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Open Connector&quot;/&gt;&#10;                    &lt;/StackPanel&gt;&#10;                &lt;/Button&gt;&#10;            &lt;/StackPanel&gt;&#10;            &lt;StackPanel Orientation=&quot;Horizontal&quot; Margin=&quot;40 0 0 0&quot;&gt;&#10;                &lt;Label Content=&quot;Data Folder Path&quot; FontSize=&quot;18&quot;/&gt;&#10;                &lt;Image Name=&quot;ddDataFolderStatusImage&quot; Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;{Binding Path=DataIcon}&quot;/&gt;&#10;                &lt;Button Margin=&quot;10 0 0 0&quot; Click=&quot;OnSelectDataFolder&quot;&gt;&#10;                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-opened-folder-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Select Data Folder&quot;/&gt;&#10;                    &lt;/StackPanel&gt;&#10;                &lt;/Button&gt;&#10;            &lt;/StackPanel&gt;&#10;        &lt;/StackPanel&gt;&#10;&#10;        &lt;Label Content=&quot;Exam&quot; Margin=&quot;0 10 0 0&quot; FontSize=&quot;20&quot; Foreground=&quot;DarkRed&quot; FontWeight=&quot;Bold&quot;/&gt;&#10;        &lt;StackPanel IsEnabled=&quot;{Binding Path=ExamEnabled}&quot;&gt;&#10;            &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                &lt;Label Content=&quot;Choose Environment&quot; FontSize=&quot;18&quot;/&gt;&#10;                &lt;ComboBox Name=&quot;ddEnvironment&quot; Width=&quot;350&quot; FontSize=&quot;18&quot;/&gt;&#10;            &lt;/StackPanel&gt;&#10;            &lt;StackPanel Margin=&quot;0 20 0 0&quot; &gt;&#10;                &lt;Button Name=&quot;ddHealthAssessmentButton&quot; IsEnabled=&quot;{Binding Path=HealthAssessmentEnabled}&quot; Width=&quot;600&quot; Click=&quot;OnHealthAssessment&quot; &gt;&#10;                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-google-web-search-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Health Assessment&quot;/&gt;&#10;                    &lt;/StackPanel&gt;&#10;                &lt;/Button&gt;&#10;                &lt;ProgressBar Visibility=&quot;Collapsed&quot; Name=&quot;ddHealthAssessmentProgressBar&quot; Value=&quot;10&quot; Minimum=&quot;0&quot; Maximum=&quot;100&quot; Height=&quot;30&quot; Width=&quot;600&quot; Foreground=&quot;##FFDA1B1B&quot; /&gt;&#10;            &lt;/StackPanel&gt;&#10;            &lt;StackPanel Name=&quot;ddProblemsPanel&quot; Visibility=&quot;Hidden&quot;&gt;&#10;                &lt;Label Content=&quot;Problems&quot; Margin=&quot;0 10 0 0&quot; FontSize=&quot;20&quot; Foreground=&quot;DarkRed&quot; FontWeight=&quot;Bold&quot;/&gt;&#10;                &lt;ScrollViewer Height=&quot;200&quot; Margin=&quot;8&quot;&gt;&#10;                    &lt;ListBox Name=&quot;ddProblemListBox&quot; Background=&quot;LightGray&quot;/&gt;&#10;                &lt;/ScrollViewer&gt;&#10;            &lt;/StackPanel&gt;&#10;        &lt;/StackPanel&gt;&#10;    &lt;/StackPanel&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="508:3466" ph="&lt;&lt;Label Content=&quot;Connections&quot; FontSize=&quot;20&quot; Foreground=&quot;DarkRed&quot; FontWeight=&quot;Bold&quot;/&gt; &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;            &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                &lt;Label Content=&quot;Server Connected&quot; FontSize=&quot;18&quot;/&gt;&#10;                &lt;Image Name=&quot;ddServerConnectedStatusImage&quot; Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;{Binding Path=ServerIcon}&quot;/&gt;&#10;                &lt;Button Margin=&quot;10 0 0 0&quot; Click=&quot;OnOpenConnector&quot;&gt;&#10;                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-connect-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Open Connector&quot;/&gt;&#10;                    &lt;/StackPanel&gt;&#10;                &lt;/Button&gt;&#10;            &lt;/StackPanel&gt;&#10;            &lt;StackPanel Orientation=&quot;Horizontal&quot; Margin=&quot;40 0 0 0&quot;&gt;&#10;                &lt;Label Content=&quot;Data Folder Path&quot; FontSize=&quot;18&quot;/&gt;&#10;                &lt;Image Name=&quot;ddDataFolderStatusImage&quot; Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;{Binding Path=DataIcon}&quot;/&gt;&#10;                &lt;Button Margin=&quot;10 0 0 0&quot; Click=&quot;OnSelectDataFolder&quot;&gt;&#10;                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-opened-folder-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Select Data Folder&quot;/&gt;&#10;                    &lt;/StackPanel&gt;&#10;                &lt;/Button&gt;&#10;            &lt;/StackPanel&gt;&#10;        &lt;/StackPanel&gt; &lt;Label Content=&quot;Exam&quot; Margin=&quot;0 10 0 0&quot; FontSize=&quot;20&quot; Foreground=&quot;DarkRed&quot; FontWeight=&quot;Bold&quot;/&gt; &lt;StackPanel IsEnabled=&quot;{Binding Path=ExamEnabled}&quot;&gt;&#10;            &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                &lt;Label Content=&quot;Choose Environment&quot; FontSize=&quot;18&quot;/&gt;&#10;                &lt;ComboBox Name=&quot;ddEnvironment&quot; Width=&quot;350&quot; FontSize=&quot;18&quot;/&gt;&#10;            &lt;/StackPanel&gt;&#10;            &lt;StackPanel Margin=&quot;0 20 0 0&quot; &gt;&#10;                &lt;Button Name=&quot;ddHealthAssessmentButton&quot; IsEnabled=&quot;{Binding Path=HealthAssessmentEnabled}&quot; Width=&quot;600&quot; Click=&quot;OnHealthAssessment&quot; &gt;&#10;                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-google-web-search-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Health Assessment&quot;/&gt;&#10;                    &lt;/StackPanel&gt;&#10;                &lt;/Button&gt;&#10;                &lt;ProgressBar Visibility=&quot;Collapsed&quot; Name=&quot;ddHealthAssessmentProgressBar&quot; Value=&quot;10&quot; Minimum=&quot;0&quot; Maximum=&quot;100&quot; Height=&quot;30&quot; Width=&quot;600&quot; Foreground=&quot;##FFDA1B1B&quot; /&gt;&#10;            &lt;/StackPanel&gt;&#10;            &lt;StackPanel Name=&quot;ddProblemsPanel&quot; Visibility=&quot;Hidden&quot;&gt;&#10;                &lt;Label Content=&quot;Problems&quot; Margin=&quot;0 10 0 0&quot; FontSize=&quot;20&quot; Foreground=&quot;DarkRed&quot; FontWeight=&quot;Bold&quot;/&gt;&#10;                &lt;ScrollViewer Height=&quot;200&quot; Margin=&quot;8&quot;&gt;&#10;                    &lt;ListBox Name=&quot;ddProblemListBox&quot; Background=&quot;LightGray&quot;/&gt;&#10;                &lt;/ScrollViewer&gt;&#10;            &lt;/StackPanel&gt;&#10;        &lt;/StackPanel&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="632:1965" ph="&lt;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                &lt;Label Content=&quot;Server Connected&quot; FontSize=&quot;18&quot;/&gt;&#10;                &lt;Image Name=&quot;ddServerConnectedStatusImage&quot; Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;{Binding Path=ServerIcon}&quot;/&gt;&#10;                &lt;Button Margin=&quot;10 0 0 0&quot; Click=&quot;OnOpenConnector&quot;&gt;&#10;                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-connect-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Open Connector&quot;/&gt;&#10;                    &lt;/StackPanel&gt;&#10;                &lt;/Button&gt;&#10;            &lt;/StackPanel&gt; &lt;StackPanel Orientation=&quot;Horizontal&quot; Margin=&quot;40 0 0 0&quot;&gt;&#10;                &lt;Label Content=&quot;Data Folder Path&quot; FontSize=&quot;18&quot;/&gt;&#10;                &lt;Image Name=&quot;ddDataFolderStatusImage&quot; Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;{Binding Path=DataIcon}&quot;/&gt;&#10;                &lt;Button Margin=&quot;10 0 0 0&quot; Click=&quot;OnSelectDataFolder&quot;&gt;&#10;                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-opened-folder-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Select Data Folder&quot;/&gt;&#10;                    &lt;/StackPanel&gt;&#10;                &lt;/Button&gt;&#10;            &lt;/StackPanel&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="682:1294" ph="&lt;&lt;Label Content=&quot;Server Connected&quot; FontSize=&quot;18&quot;/&gt; &lt;Image Name=&quot;ddServerConnectedStatusImage&quot; Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;{Binding Path=ServerIcon}&quot;/&gt; &lt;Button Margin=&quot;10 0 0 0&quot; Click=&quot;OnOpenConnector&quot;&gt;&#10;                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-connect-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Open Connector&quot;/&gt;&#10;                    &lt;/StackPanel&gt;&#10;                &lt;/Button&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="921:1268" ph="&lt;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-connect-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Open Connector&quot;/&gt;&#10;                    &lt;/StackPanel&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="992:1242" ph="&lt;&lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-connect-32.png&quot;/&gt; &lt;Label Content=&quot;Open Connector&quot;/&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="1307:1943" ph="&lt;&lt;Label Content=&quot;Data Folder Path&quot; FontSize=&quot;18&quot;/&gt; &lt;Image Name=&quot;ddDataFolderStatusImage&quot; Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;{Binding Path=DataIcon}&quot;/&gt; &lt;Button Margin=&quot;10 0 0 0&quot; Click=&quot;OnSelectDataFolder&quot;&gt;&#10;                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-opened-folder-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Select Data Folder&quot;/&gt;&#10;                    &lt;/StackPanel&gt;&#10;                &lt;/Button&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="1557:1917" ph="&lt;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-opened-folder-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Select Data Folder&quot;/&gt;&#10;                    &lt;/StackPanel&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="1631:1891" ph="&lt;&lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-opened-folder-32.png&quot;/&gt; &lt;Label Content=&quot;Select Data Folder&quot;/&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="2078:3448" ph="&lt;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                &lt;Label Content=&quot;Choose Environment&quot; FontSize=&quot;18&quot;/&gt;&#10;                &lt;ComboBox Name=&quot;ddEnvironment&quot; Width=&quot;350&quot; FontSize=&quot;18&quot;/&gt;&#10;            &lt;/StackPanel&gt; &lt;StackPanel Margin=&quot;0 20 0 0&quot; &gt;&#10;                &lt;Button Name=&quot;ddHealthAssessmentButton&quot; IsEnabled=&quot;{Binding Path=HealthAssessmentEnabled}&quot; Width=&quot;600&quot; Click=&quot;OnHealthAssessment&quot; &gt;&#10;                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-google-web-search-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Health Assessment&quot;/&gt;&#10;                    &lt;/StackPanel&gt;&#10;                &lt;/Button&gt;&#10;                &lt;ProgressBar Visibility=&quot;Collapsed&quot; Name=&quot;ddHealthAssessmentProgressBar&quot; Value=&quot;10&quot; Minimum=&quot;0&quot; Maximum=&quot;100&quot; Height=&quot;30&quot; Width=&quot;600&quot; Foreground=&quot;##FFDA1B1B&quot; /&gt;&#10;            &lt;/StackPanel&gt; &lt;StackPanel Name=&quot;ddProblemsPanel&quot; Visibility=&quot;Hidden&quot;&gt;&#10;                &lt;Label Content=&quot;Problems&quot; Margin=&quot;0 10 0 0&quot; FontSize=&quot;20&quot; Foreground=&quot;DarkRed&quot; FontWeight=&quot;Bold&quot;/&gt;&#10;                &lt;ScrollViewer Height=&quot;200&quot; Margin=&quot;8&quot;&gt;&#10;                    &lt;ListBox Name=&quot;ddProblemListBox&quot; Background=&quot;LightGray&quot;/&gt;&#10;                &lt;/ScrollViewer&gt;&#10;            &lt;/StackPanel&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="2142:2348" ph="&lt;&lt;Label Content=&quot;Choose Environment&quot; FontSize=&quot;18&quot;/&gt; &lt;ComboBox Name=&quot;ddEnvironment&quot; Width=&quot;350&quot; FontSize=&quot;18&quot;/&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="2361:3052" ph="&lt;&lt;Button Name=&quot;ddHealthAssessmentButton&quot; IsEnabled=&quot;{Binding Path=HealthAssessmentEnabled}&quot; Width=&quot;600&quot; Click=&quot;OnHealthAssessment&quot; &gt;&#10;                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-google-web-search-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Health Assessment&quot;/&gt;&#10;                    &lt;/StackPanel&gt;&#10;                &lt;/Button&gt; &lt;ProgressBar Visibility=&quot;Collapsed&quot; Name=&quot;ddHealthAssessmentProgressBar&quot; Value=&quot;10&quot; Minimum=&quot;0&quot; Maximum=&quot;100&quot; Height=&quot;30&quot; Width=&quot;600&quot; Foreground=&quot;##FFDA1B1B&quot; /&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="2409:2850" ph="&lt;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;                        &lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-google-web-search-32.png&quot;/&gt;&#10;                        &lt;Label Content=&quot;Health Assessment&quot;/&gt;&#10;                    &lt;/StackPanel&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="2561:2824" ph="&lt;&lt;Image Width=&quot;20&quot; Height=&quot;20&quot; Source=&quot;/SpicyDataDoctor;component/Images/icons8-google-web-search-32.png&quot;/&gt; &lt;Label Content=&quot;Health Assessment&quot;/&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="3065:3426" ph="&lt;&lt;Label Content=&quot;Problems&quot; Margin=&quot;0 10 0 0&quot; FontSize=&quot;20&quot; Foreground=&quot;DarkRed&quot; FontWeight=&quot;Bold&quot;/&gt; &lt;ScrollViewer Height=&quot;200&quot; Margin=&quot;8&quot;&gt;&#10;                    &lt;ListBox Name=&quot;ddProblemListBox&quot; Background=&quot;LightGray&quot;/&gt;&#10;                &lt;/ScrollViewer&gt;.../&gt;" />
+            <marker date="1555913371970" expanded="true" signature="3252:3400" ph="&lt;&lt;ListBox Name=&quot;ddProblemListBox&quot; Background=&quot;LightGray&quot;/&gt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpicyDataDoctor/Operations.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2415">
+          <caret line="271" selection-start-line="271" selection-end-line="271" />
+          <folding>
+            <marker date="1555913792816" expanded="false" signature="6:377" ph="..." />
+            <marker date="1555913792816" expanded="true" signature="404:14499" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="460:14495" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="544:732" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="609:722" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="807:989" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="870:979" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="1056:1241" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="1120:1231" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="1308:1499" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="1374:1489" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="1590:1817" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="1668:1807" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="1941:2044" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="2258:2485" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="2521:3116" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="2887:3106" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="3187:3488" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="3383:3478" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="3540:4781" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="3600:4583" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="3860:4236" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="4257:4552" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="4600:4771" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="4857:7104" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="4933:6471" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="4999:5071" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="5151:6457" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="5176:6351" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="5455:5620" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="5664:5745" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="5822:6282" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="5958:6256" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="6106:6226" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="6394:6439" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="6505:6843" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="6860:7094" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="7144:7369" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="7231:7359" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="7402:9054" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="7945:8127" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="9093:10767" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="9225:10294" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="9561:10278" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="9636:10260" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="9741:9966" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="9993:10148" ph="/* if (rc == true) ... */" />
+            <marker date="1555913792816" expanded="true" signature="10311:10506" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="10565:10653" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="10670:10747" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="10842:11098" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="11161:11544" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="11618:14489" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="11971:12161" ph="/* mainWindow.ddHealthAssessmentButton.Visibility = System.Windows.Visibility.Collapsed; ... */" />
+            <marker date="1555913792816" expanded="true" signature="12763:14479" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="13088:14398" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="13195:13765" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="13356:13612" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="13843:14379" ph="{...}" />
+            <marker date="1555913792816" expanded="true" signature="14004:14227" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

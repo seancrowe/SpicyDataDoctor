@@ -339,13 +339,17 @@ namespace SpicyDataDoctor
 
         public void SetApiEnvironment(string environmentName)
         {
+            string path = dataFolder + "/config/apiKeys/spicyDATAdoctorSPICYdataDOCTORspicyDATAdoctorSPICYdataDOCTORspicyDATAdoctorSPICYdataDR==.xml";
+
             XmlDocument xmlDocument = new XmlDocument();
 
-            xmlDocument.Load(dataFolder + "/config/apiKeys/spicyDATAdoctorSPICYdataDOCTORspicyDATAdoctorSPICYdataDOCTORspicyDATAdoctorSPICYdataDR==.xml");
+            xmlDocument.Load(path);
 
             XmlNode xmlNode = xmlDocument.SelectSingleNode("//key");
 
-            xmlNode.Attributes["userEnvironmentName"].Value = environmentName;
+            xmlNode.Attributes["environmentName"].Value = environmentName;
+
+            xmlDocument.Save(path);
         }
 
         //userEnvironmentName
@@ -368,8 +372,18 @@ namespace SpicyDataDoctor
             mainWindow.ddHealthAssessmentProgressBar.Value = 20;
             var documents = health.Documents;
 
-            mainWindow.ddHealthAssessmentProgressBar.Value = 80;
+            mainWindow.ddHealthAssessmentProgressBar.Value = 30;
+            List<Asset> missingSourceAssets = health.GetAssetsWithMissingSourceFile();
+            
+
+            mainWindow.ddHealthAssessmentProgressBar.Value = 40;
             List<Asset> unusedAssets = health.GetUnusedAssets();
+            unusedAssets = unusedAssets.Where(a => !missingSourceAssets.Any(ma => ma.id == a.id)).ToList();
+
+            mainWindow.ddHealthAssessmentProgressBar.Value = 50;
+            List<Document> missingSourceDocuments = health.GetDocumentsWithMissingSourceFile();
+
+
 
             mainWindow.ddHealthAssessmentProgressBar.Value = 100;
 
@@ -380,9 +394,8 @@ namespace SpicyDataDoctor
 
             if (unusedAssets.Count > 0)
             {
-                mainWindow.ddProblemListBox.Items.Clear();
 
-                Problem problem = new Problem($"Unused Assets ({unusedAssets.Count})", "These are assets that not found in any documents and thus safe to delete without ruining any existing documents.", new Dictionary<string, Action>
+                Problem problem = new Problem($"Unused Assets ({unusedAssets.Count})", "This is not really an error. These are assets that not found in any documents and thus safe to delete without ruining any existing documents.", new Dictionary<string, Action>
                 {
                     {"Move all unused assets to a folder UnusedAsssetsFolder", () =>
                     {
@@ -406,6 +419,50 @@ namespace SpicyDataDoctor
                         foreach (Asset asset in unusedAssets)
                         {
                             soapClient.ResourceItemDelete("spicyDATAdoctorSPICYdataDOCTORspicyDATAdoctorSPICYdataDOCTORspicyDATAdoctorSPICYdataDR==", "Assets", asset.id);
+                        }
+
+                        mainWindow.IsEnabled = true;
+                        System.Windows.MessageBox.Show("Action Completed");
+                    }}
+                });
+
+                mainWindow.ddProblemListBox.Items.Add(problem);
+            }
+
+            if (missingSourceAssets.Count > 0)
+            {
+                Problem problem = new Problem($"Assets Missing Source File ({missingSourceAssets.Count})", "These are assets that are missing their source file. These files dirty your data XMLs and should be resolved with.", new Dictionary<string, Action>
+                {
+                    {"Remove assets with missing source file from data xml", () =>
+                    {
+                        mainWindow.IsEnabled = false;
+                        Thread.Sleep(100);
+
+                        foreach (Asset asset in missingSourceAssets)
+                        {
+                            soapClient.ResourceItemDelete("spicyDATAdoctorSPICYdataDOCTORspicyDATAdoctorSPICYdataDOCTORspicyDATAdoctorSPICYdataDR==", "Assets", asset.id);
+                        }
+
+                        mainWindow.IsEnabled = true;
+                        System.Windows.MessageBox.Show("Action Completed");
+                    }}
+                });
+
+                mainWindow.ddProblemListBox.Items.Add(problem);
+            }
+
+            if (missingSourceDocuments.Count > 0)
+            {
+                Problem problem = new Problem($"Documents Missing Source File ({missingSourceDocuments.Count})", "These are documents that are missing their source file. These files dirty your data XMLs and should be resolved with.", new Dictionary<string, Action>
+                {
+                    {"Remove documents with missing source file from data xml", () =>
+                    {
+                        mainWindow.IsEnabled = false;
+                        Thread.Sleep(100);
+
+                        foreach (Document document in missingSourceDocuments)
+                        {
+                            soapClient.ResourceItemDelete("spicyDATAdoctorSPICYdataDOCTORspicyDATAdoctorSPICYdataDOCTORspicyDATAdoctorSPICYdataDR==", "Documents", document.id);
                         }
 
                         mainWindow.IsEnabled = true;

@@ -308,5 +308,20 @@ namespace SpicyDataDoctor
             return documentWithDeletedAssets;
         }
 
+        public List<Document> GetDocumentsWithMissingSourceFile()
+        {
+            List<Document> missingDocuments = new List<Document>();
+
+            foreach (Document document in Documents)
+            {
+                if (File.Exists(document.path) == false)
+                {
+                    missingDocuments.Add(document);
+                }
+            }
+
+            return missingDocuments;
+        }
+
     }
 }
